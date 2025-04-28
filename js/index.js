@@ -54,37 +54,8 @@ const getTasks = async () => {
     })
 }
 
-    /*{
-    try {
-        const response = await fetch(BACKEND_ROOT_URL + '/tasks');
-        const json = await response.json(); // fixed: "awai" → "await"
-        json.forEach(task => {
-            renderTask(task.description);
-        });
-        input.disabled = false;
-    } catch (error) {
-        alert("Error retrieving tasks: " + error.message);
-    }
-        
-};*/
 
-// Saves a new task to the backend
-/*const saveTask = async (task) => {
-    try {
-        const response = await fetch(BACKEND_ROOT_URL + '/tasks', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ description: task })  // ✅ this is all you need
-        });
 
-        const json = await response.json(); // ✅ get response from server
-        return json; // so it can be used in the .then()
-    } catch (error) {
-        alert("Error saving task: " + error.message);
-    }
-};*/
 
 
 

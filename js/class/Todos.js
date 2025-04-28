@@ -8,22 +8,7 @@ class Todos {
   constructor(url) {
     this.#backend_url = url
   }
-  /* getTasks = () => {
-    return new Promise(async(resolve, reject) => {
-      fetch(this.#backend_url)
-      .then((response) => response.json())
-      .then((json) => {
-       console.log("getTasks sanema: ", json) //so pievienoju pec drauga ieteikuma
-       console.log("typeof json:", typeof json);
-  console.log("isArray?", Array.isArray(json));
-  console.log("json:", json); 
-       this.#readJson(json.tasks)
-        resolve(this.#tasks)
-      }, (error) => {
-        reject(error)
-      })
-      })
-  }*/
+  
       getTasks = () => {
         return new Promise(async (resolve, reject) => {
           fetch(this.#backend_url + '/tasks') //this.#readJson(json.tasks)
