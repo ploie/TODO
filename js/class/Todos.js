@@ -6,9 +6,8 @@ class Todos {
   #backend_url = ''
 
   constructor(url) {
-this.#backend_url = url
+    this.#backend_url = url
   }
-
   /* getTasks = () => {
     return new Promise(async(resolve, reject) => {
       fetch(this.#backend_url)
@@ -27,24 +26,15 @@ this.#backend_url = url
   }*/
       getTasks = () => {
         return new Promise(async (resolve, reject) => {
-          fetch(this.#backend_url)
+          fetch(this.#backend_url + '/tasks') //this.#readJson(json.tasks)
             .then((response) => response.json())
             .then((json) => {
-              console.log("json full:", JSON.stringify(json, null, 2));
-              console.log("json.tasks:", json.tasks);  
-       
-    
-              if (Array.isArray(json.tasks)) {
-                this.#readJson(json.tasks);  // در صورتی که tasks آرایه است، پردازش می‌کنیم
-              } else {
-                console.error("json.tasks is not an array or is undefined.");
-              }
-              resolve(this.#tasks);
+              this.#readJson(json)
+              resolve(this.#tasks)
+            }, (error) => {
+              reject(error)
             })
-            .catch((error) => {
-              reject(error);
-              });
-        });
+        })
       };
        
 

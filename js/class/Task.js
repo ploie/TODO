@@ -7,7 +7,7 @@ constructor(id,text)    {
     this.#text = text
 }
 
-getID() {
+getId() {
     return this.#id
 }
 getText() {

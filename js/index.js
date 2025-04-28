@@ -1,7 +1,6 @@
 
 const BACKEND_ROOT_URL = 'http://localhost:3001';
 
-import { error } from "console";
 import {Todos} from "./class/Todos.js"
 
 const todos = new Todos(BACKEND_ROOT_URL)
