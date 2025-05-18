@@ -15,7 +15,8 @@ const renderTask = (task) => {
     const li = document.createElement('li');
     li.setAttribute('class', 'list-group-item'); // fixed typo: "lit-group-item"
     li.setAttribute('data-key', task.getId().toString())
-    li.innerHTML = task.getText()
+    //the next line made Task names be printed twice
+    //li.innerHTML = task.getText()
     renderSpan(li,task.getText())
     renderLink(li,task.getId())
     list.append(li)
