@@ -1,6 +1,7 @@
-//Aizstaju ar drauga ieteikto 
+//Nonemu so 18_5_2025 jo tas jau ir ieksh index.js
 require('dotenv').config();
 const { Pool } = require('pg');
+
 
 // Create the pool once when the app starts
 const pool = new Pool({

@@ -1,4 +1,7 @@
 require('dotenv').config()
+//naakosho rindu pievienoju 18_5_2025
+console.log(process.env)
+
 const express = require('express')
 const cors = require('cors')
 const { todoRouter } = require('./routes/todo.js')
@@ -14,6 +17,7 @@ app.use(express.urlencoded({extended: false}))
 app.use('/',todoRouter)
 
 const port = process.env.PORT
+//const port = process.env.PORT || 3001
 
 //  Start server
 app.listen(port)
