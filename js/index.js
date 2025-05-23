@@ -41,6 +41,7 @@ const renderLink = (li, id) => {
             alert(error)
         })
     })
+    console.log(`Delete request received for ID: ${id}`);
 }
 
 // Fetches tasks from the backend
